@@ -47,41 +47,41 @@ def bal():
     return 0
 
 
-print("welcome.....")
-name = input("enter your name:")
+print("Welcome.....")
+name = input("Enter your name:")
 b = 0
 while b == 0:
-    print("hello", name, "what do you want to do??")
+    print("Hello", name, "! What do you want to do??")
     print("1.Check balance(DMAT ACC)")
     print("2.Withdraw to DMAT ACC")
     print("3.Deposit from DMAT ACC")
     choice = int(input("enter here:"))
     if choice == 1:
         if dmat == 0:
-            print("oops,seems like your dmat account is empty")
+            print("Oops,seems like your dmat account is empty")
             ans = int(
-                input("would you like to withdraw some amount(1.yes/2.no):"))
+                input("Would you like to withdraw some amount(1.yes/2.no):"))
             if ans == 1:
-                amu = int(input("how much amount would  you like to withdraw:"))
+                amu = int(input("How much amount would  you like to withdraw:"))
                 dmat += amu
                 b = +1
             elif ans == 2:
-                print('nevermind,have a nice day')
-                print("bye")
+                print('Nevermind,have a nice day')
+                print("Bye")
                 break
     elif choice == 2:
         mon = int(
-            input("how much money would you like to withdraw(min(Rs10,00,000)):"))
+            input("How much money would you like to withdraw(min(Rs10,00,000)):"))
         dmat += mon
         print("TRANSACTION SUCCESSFUL !!!")
         b += 1
 
     elif choice == 3:
         if dmat == 0:
-            print("you can't deposit you balance is empty")
+            print("You can't deposit you balance is empty")
         else:
             dep = int(
-                input("how much money do you want to deposit Current balance:", dmat, ":"))
+                input("How much money do you want to deposit Current balance:", dmat, ":"))
             dmat = dmat-dep
             b += 1
 original()
